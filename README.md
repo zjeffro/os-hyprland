@@ -37,3 +37,7 @@ The following example uses Docker and assumes you have Docker correctly installe
     ```
 
  4) When done, your image will be in the `builds` folder.
+
+## Release tags
+
+Released usually follows the Ubuntu release cycle i.e. `22.10, 23.04..`. Releases named `22.10-r1` means that the release is still 22.10 with just a refreshed of the repositories and packages, this is meant to help users getting the latest release with updated packages, with more fixes and features OTB.
