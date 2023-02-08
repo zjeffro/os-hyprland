@@ -1,4 +1,4 @@
-name: VanillaOS kinetic
+name: PikaOS kinetic
 
 on:
   workflow_dispatch
@@ -23,5 +23,5 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        name: VanillaOS 22.10
+        name: PikaOS 22.10
         path: builds/
