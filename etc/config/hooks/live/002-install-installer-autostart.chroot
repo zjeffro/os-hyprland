@@ -4,3 +4,4 @@
 mkdir -p /etc/skel/.config/autostart
 
 cp /etc/xdg/autostart/pika-installer-autostart.desktop /etc/skel/.config/autostart/
+rm /usr/share/applications/calamares.desktop
