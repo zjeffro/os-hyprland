@@ -2,3 +2,7 @@
 # Description: Add The PikaOS BaseOS PPA
 
 rm /etc/apt/sources.list.d/pika.list
+
+apt update
+
+apt upgrade
