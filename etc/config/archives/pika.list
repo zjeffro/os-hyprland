@@ -7,7 +7,7 @@ deb [trusted=yes] https://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu kineti
 deb [trusted=yes] https://ppa.launchpadcontent.net/pikaos/multimedia/ubuntu kinetic main
 deb [trusted=yes] https://repo.radeon.com/rocm/apt/5.4.1 jammy main
 deb [trusted=yes] http://repo.steampowered.com/steam stable steam
-deb [trusted=yes] http://archive.ubuntu.com/ubuntu kinetic kinetic-security kinetic-updates kinetic-backports kinetic-proposed
+deb http://archive.ubuntu.com/ubuntu kinetic kinetic-security kinetic-updates kinetic-backports kinetic-proposed
 deb [trusted=yes] https://dl.winehq.org/wine-builds/ubuntu kinetic main
 deb [trusted=yes] https://ppa.launchpadcontent.net/xtradeb/apps/ubuntu kinetic main
 deb [trusted=yes] https://ppa.launchpadcontent.net/xtradeb/play/ubuntu kinetic main
