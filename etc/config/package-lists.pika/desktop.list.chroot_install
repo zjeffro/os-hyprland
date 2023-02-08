@@ -3,6 +3,7 @@ kernel-pika
 zram-config
 pika-baseos
 pika-amdgpu-core
+pika-amdgpu-switcher
 pika-gnome-desktop-minimal
 update-systemd-boot
 systemd-boot
