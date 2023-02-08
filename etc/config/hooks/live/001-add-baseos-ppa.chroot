@@ -1,6 +1,4 @@
 #!/bin/sh
 # Description: Add The PikaOS BaseOS PPA
 
-#sudo curl -o /etc/apt/trusted.gpg.d/pika-keyring.gpg -LJ "https://github.com/PikaOS-Linux/pkgs-baseos/raw/main/pika-sources/pika-sources/etc/apt/trusted.gpg.d/pika-keyring.gpg"
-#sudo curl -s --compressed -o /etc/apt/sources.list.d/pika-baseos.sources "https://raw.githubusercontent.com/PikaOS-Linux/pkgs-baseos/main/pika-sources/pika-sources/etc/apt/sources.list.d/pika-baseos.sources"
-#sudo apt update
+rm /etc/apt/sources.list.d/pika.list

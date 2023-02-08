@@ -1,7 +1,7 @@
+pika-sources
 kernel-pika
 zram-config
 pika-baseos
-pika-sources
 pika-amdgpu-core
 pika-gnome-desktop-minimal
 update-systemd-boot
