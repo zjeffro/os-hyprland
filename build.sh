@@ -36,6 +36,10 @@ patch /usr/lib/live/build/binary_grub-efi < live-build-fix-shim-remove.patch
 # https://salsa.debian.org/installer-team/debootstrap/blob/master/debian/changelog
 ln -sfn /usr/share/debootstrap/scripts/gutsy /usr/share/debootstrap/scripts/kinetic
 
+patch /usr/share/debootstrap/functions < debootstrap-backport-zstd-support.patch
+
+dpkg -i debs/stage2/*.deb
+
 build () {
   BUILD_ARCH="$1"
 
@@ -81,7 +85,7 @@ build () {
   YYYYMMDD="$(date +%Y%m%d)"
   OUTPUT_DIR="$BASE_DIR/builds/$BUILD_ARCH"
   mkdir -p "$OUTPUT_DIR"
-  FNAME="VanillaOS-$VERSION-$CHANNEL.$YYYYMMDD$OUTPUT_SUFFIX"
+  FNAME="PikaOS-$VERSION-$CHANNEL.$YYYYMMDD$OUTPUT_SUFFIX"
   mv "$BASE_DIR/tmp/$BUILD_ARCH/live-image-$BUILD_ARCH.hybrid.iso" "$OUTPUT_DIR/${FNAME}.iso"
 
   # cd into output to so {FNAME}.sha256.txt only
