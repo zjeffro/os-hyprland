@@ -1,0 +1,8 @@
+#!/bin/sh
+# Description: Add The PikaOS BaseOS PPA
+
+rm /etc/apt/sources.list.d/pika.list
+
+apt update
+
+apt upgrade --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 --option Dpkg::Options::="--force-confnew" 
