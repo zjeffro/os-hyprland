@@ -36,10 +36,6 @@ patch /usr/lib/live/build/binary_grub-efi < live-build-fix-shim-remove.patch
 # https://salsa.debian.org/installer-team/debootstrap/blob/master/debian/changelog
 ln -sfn /usr/share/debootstrap/scripts/gutsy /usr/share/debootstrap/scripts/kinetic
 
-patch /usr/share/debootstrap/functions < debootstrap-backport-zstd-support.patch
-
-dpkg -i debs/stage2/*.deb
-
 build () {
   BUILD_ARCH="$1"
 
