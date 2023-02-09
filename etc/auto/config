@@ -27,7 +27,7 @@ lb config noauto \
     --mirror-binary "http://archive.ubuntu.com/ubuntu/" \
     --parent-mirror-binary "http://archive.ubuntu.com/ubuntu/" \
     --keyring-packages ubuntu-keyring \
-    --apt-options "--allow-downgrades --allow-unauthenticated --allow-insecure-repositories --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 --option Dpkg::Options::="--force-confdef" " \
+    --apt-options "--allow-downgrades --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 --option Dpkg::Options::="--force-confdef" " \
     --cache-packages false \
     --uefi-secure-boot enable \
     --binary-images iso-hybrid \

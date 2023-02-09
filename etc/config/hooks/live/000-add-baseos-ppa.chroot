@@ -5,4 +5,4 @@ rm -rfv /etc/apt/sources.list.d/pika.list || echo "Failed to remove os-builder a
 
 apt update
 
-apt upgrade --allow-downgrades --allow-insecure-repositories --allow-unauthenticated --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 --option Dpkg::Options::="--force-confdef" 
+apt upgrade --allow-downgrades --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 --option Dpkg::Options::="--force-confdef" 
