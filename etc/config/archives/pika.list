@@ -16,4 +16,3 @@ deb [trusted=yes] https://dl.winehq.org/wine-builds/ubuntu kinetic main
 deb [trusted=yes] https://ppa.launchpadcontent.net/xtradeb/apps/ubuntu kinetic main
 deb [trusted=yes] https://ppa.launchpadcontent.net/xtradeb/play/ubuntu kinetic main
 deb [trusted=yes] https://packages.xtradeb.net/ubuntu kinetic apps play
-
