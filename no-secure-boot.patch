@@ -1,0 +1,45 @@
+--- data/usr/lib/live/build/binary_grub-efi	2021-04-02 18:43:54.000000000 +0300
++++ binary_grub-efi	2023-02-09 19:09:02.858763492 +0300
+@@ -9,7 +9,9 @@
+ ## under certain conditions; see COPYING for details.
+ 
+ 
++
+ set -e
++LB_UEFI_SECURE_BOOT="disable"
+ 
+ # Including common functions
+ [ -e "${LIVE_BUILD}/scripts/build.sh" ] && . "${LIVE_BUILD}/scripts/build.sh" || . /usr/lib/live/build.sh
+@@ -93,30 +95,10 @@
+ _LB_PACKAGES="shim-signed grub-efi-${_SB_EFI_DEB}-signed"
+ case "${LB_UEFI_SECURE_BOOT}" in
+ 	auto)
+-		# Use Check_installed, as Check_package will error out immediately
+-		set +e
+-		Install_packages
+-		set -e
+-		Check_installed chroot /usr/lib/grub/${_SB_EFI_PLATFORM}-efi-signed/gcd${_SB_EFI_NAME}.efi.signed \
+-			grub-efi-${_SB_EFI_DEB}-signed
+-		_GRUB_INSTALL_STATUS="${INSTALL_STATUS}"
+-		Check_installed chroot /usr/lib/shim/shim${_SB_EFI_NAME}.efi.signed \
+-			shim-signed
+-
+-		if [ "${INSTALL_STATUS}" -ne 0 -o "${_GRUB_INSTALL_STATUS}" -ne 0 ]
+-		then
+-			Echo_warning "UEFI Secure Boot disabled due to missing signed Grub/Shim."
+-		else
+-			Echo_message "UEFI Secure Boot support enabled."
+-		fi
++		Echo_message "UEFI Secure Boot support disabled."
+ 		;;
+ 	enable)
+-		Check_package chroot /usr/lib/grub/${_SB_EFI_PLATFORM}-efi-signed/gcd${_SB_EFI_NAME}.efi.signed \
+-			grub-efi-${_SB_EFI_DEB}-signed
+-		Check_package chroot /usr/lib/shim/shim${_SB_EFI_NAME}.efi.signed \
+-			shim-signed
+-		Install_packages
+-		Echo_message "UEFI Secure Boot support enabled."
++		Echo_message "UEFI Secure Boot support disabled."
+ 		;;
+ 	disable)
+ 		Echo_message "UEFI Secure Boot support disabled."
