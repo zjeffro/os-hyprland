@@ -1,12 +1,12 @@
 #!/bin/sh
 
 mkdir casper || true
-cp -rfv boot/filesystem.squashfs casper/filesystem.squashfs
-cp -rfv boot/filesystem.size casper/filesystem.size || true
-cp -rfv boot/initrd.img-*fsync-cosmo-amd64 casper/initrd.lz
-cp -rfv boot/vmlinuz-*fsync-cosmo-amd64 casper/vmlinuz
-cp -rfv boot/filesystem.packages-remove casper/filesystem.manifest-remove || true
-cp -rfv boot/filesystem.packages casper/filesystem.manifest || true
+mv boot/filesystem.squashfs casper/filesystem.squashfs
+mv boot/filesystem.size casper/filesystem.size || true
+cp boot/initrd.img-*fsync-cosmo-amd64 casper/initrd.lz
+cp boot/vmlinuz-*fsync-cosmo-amd64 casper/vmlinuz
+mv boot/filesystem.packages-remove casper/filesystem.manifest-remove || true
+mv boot/filesystem.packages casper/filesystem.manifest || true
 
 mkdir live || true
-cp -rfv casper/vmlinuz live/vmlinuz
+cp casper/vmlinuz live/vmlinuz
