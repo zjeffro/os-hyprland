@@ -1,18 +1,18 @@
-deb [trusted=yes] https://ppa.launchpadcontent.net/pikaos/baseos/ubuntu kinetic main
-deb [trusted=yes] https://repo.radeon.com/amdgpu/5.4.1/ubuntu jammy main proprietary 
-deb [trusted=yes] https://repo.radeon.com/amdvlk/apt/debian bionic main
-deb [trusted=yes] http://ppa.launchpad.net/kisak/kisak-mesa/ubuntu kinetic main
-deb [trusted=yes] https://ppa.launchpadcontent.net/kubuntu-ppa/backports/ubuntu kinetic main
-deb [trusted=yes] https://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu kinetic main
-deb [trusted=yes] https://ppa.launchpadcontent.net/pikaos/multimedia/ubuntu kinetic main
-deb [trusted=yes] https://repo.radeon.com/rocm/apt/5.4.1 jammy main
-deb [trusted=yes] http://repo.steampowered.com/steam stable steam
+deb https://ppa.launchpadcontent.net/pikaos/baseos/ubuntu kinetic main
+deb https://repo.radeon.com/amdgpu/5.4.1/ubuntu jammy main proprietary 
+deb https://repo.radeon.com/amdvlk/apt/debian bionic main
+deb http://ppa.launchpad.net/kisak/kisak-mesa/ubuntu kinetic main
+deb https://ppa.launchpadcontent.net/kubuntu-ppa/backports/ubuntu kinetic main
+deb https://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu kinetic main
+deb https://ppa.launchpadcontent.net/pikaos/multimedia/ubuntu kinetic main
+deb https://repo.radeon.com/rocm/apt/5.4.1 jammy main
+deb http://repo.steampowered.com/steam stable steam
 deb http://archive.ubuntu.com/ubuntu kinetic main restricted universe multiverse
 deb http://archive.ubuntu.com/ubuntu kinetic-security main restricted universe multiverse
 deb http://archive.ubuntu.com/ubuntu kinetic-updates main restricted universe multiverse
 deb http://archive.ubuntu.com/ubuntu kinetic-backports main restricted universe multiverse
 deb http://archive.ubuntu.com/ubuntu kinetic-proposed main restricted universe multiverse
-deb [trusted=yes] https://dl.winehq.org/wine-builds/ubuntu kinetic main
-deb [trusted=yes] https://ppa.launchpadcontent.net/xtradeb/apps/ubuntu kinetic main
-deb [trusted=yes] https://ppa.launchpadcontent.net/xtradeb/play/ubuntu kinetic main
-deb [trusted=yes] https://packages.xtradeb.net/ubuntu kinetic apps play
+deb https://dl.winehq.org/wine-builds/ubuntu kinetic main
+deb https://ppa.launchpadcontent.net/xtradeb/apps/ubuntu kinetic main
+deb https://ppa.launchpadcontent.net/xtradeb/play/ubuntu kinetic main
+deb https://packages.xtradeb.net/ubuntu kinetic apps play
