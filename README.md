@@ -1,16 +1,13 @@
 ## This ISO Builder
 
 This ISO builder was basically a combination of previous efforts from Ubuntu
-Budgie (budgie-remix at the time), some stuff from livecd-rootfs from launchpad
-and Elementary OS, thanks to the amazing devs from all around!
-Elem Link: https://github.com/elementary/os
+Budgie (budgie-remix at the time), some stuff from livecd-rootfs from launchpad, 
+Elementary OS, and most importantly VanillaOS thanks to the amazing devs from all around!
+Vanilla-OS Link: https://github.com/Vanilla-OS/os
 
 ## Why not just fork from livecd-rootfs?
 
-The Ubuntu ISO's are built with ubuntu-cdimage scripts and with livecd-rootfs,
-but it has a lot of extra scripts that are hard to navigate all at once unless
-you have previous experience and is a bottomless well of asterisks attached to it.
-It's better to get something not perfect, but close enough.
+We do not posses enough IQ to do that! 
 
 ## Building Locally
 
@@ -21,7 +18,7 @@ The following example uses Docker and assumes you have Docker correctly installe
  1) Clone this project & `cd` into it:
 
     ```
-    git clone https://github.com/Vanilla-OS/os.git && cd os
+    git clone https://github.com/PikaOS-Linux/os.git && cd os
     ```
 
  2) Configure the channel in the `etc/terraform.conf` (unstable, all).
