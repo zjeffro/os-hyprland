@@ -1,7 +1,7 @@
 #!/bin/sh
 # Description: Add The PikaOS BaseOS PPA
 
-rm -rfv /etc/apt/sources.list.d/pika.list
+rm -rfv /etc/apt/sources.list.d/pika.list || echo "Failed to remove os-builder archives list" && exit 1
 
 apt update
 
