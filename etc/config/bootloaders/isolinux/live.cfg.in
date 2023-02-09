@@ -1,7 +1,7 @@
 prompt 0
 
 MENU HIDDEN
-MENU AUTOBOOT Booting Vanilla OS live disk in # seconds
+MENU AUTOBOOT Booting PikaOS live media in # seconds
 timeout 50
 
 label live-@FLAVOUR@
