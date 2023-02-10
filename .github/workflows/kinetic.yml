@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     container:
-      image: debian:latest
+      image: debian:sid
       volumes:
         - /proc:/proc
       options: --privileged -it
