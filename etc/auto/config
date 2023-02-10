@@ -11,7 +11,8 @@ lb config noauto \
     --architectures "$ARCH" \
     --mode ubuntu \
     --bootloader grub \
-    --bootloaders "grub-efi grub-pc"
+    --bootloaders "grub-efi grub-pc" \
+    --chroot-squashfs-compression-type xz \
     --compression xz \
     --initramfs none \
     --distribution "$BASECODENAME" \
