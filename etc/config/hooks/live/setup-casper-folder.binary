@@ -3,7 +3,7 @@
 mkdir casper || true
 mv boot/filesystem.squashfs casper/filesystem.squashfs
 mv boot/filesystem.size casper/filesystem.size || true
-mv boot/initrd.img-*generic casper/initrd.lz
+mv boot/initrd.img-*generic casper/initrd.img
 mv boot/vmlinuz-*generic casper/vmlinuz
 mv boot/filesystem.packages-remove casper/filesystem.manifest-remove || true
 mv boot/filesystem.packages casper/filesystem.manifest || true

@@ -8,14 +8,14 @@ label live-@FLAVOUR@
 	menu label ^Start PikaOS Live Media
 	menu default
 	linux /casper/vmlinuz
-	initrd /casper/initrd.lz
+	initrd /casper/initrd.img
 	append @APPEND_LIVE@
 
 label live-failsafe
 	menu label Start PikaOS Live Media (Safe Graphics)
 	set gfxpayload=keep
 	linux /casper/vmlinuz
-	initrd /casper/initrd.lz
+	initrd /casper/initrd.img
 	append @APPEND_LIVE@ nomodeset
 
 label hd
