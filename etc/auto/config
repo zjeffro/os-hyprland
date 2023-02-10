@@ -10,6 +10,10 @@ KERNEL_FLAVORS="cosmo-amd64 generic"
 lb config noauto \
     --architectures "$ARCH" \
     --mode ubuntu \
+    --bootloader grub \
+    --bootloaders "grub-efi grub-pc"
+    --chroot-squashfs-compression-type xz \
+    --compression xz \
     --initramfs none \
     --distribution "$BASECODENAME" \
     --parent-distribution "$BASECODENAME" \
@@ -29,7 +33,7 @@ lb config noauto \
     --keyring-packages "ubuntu-keyring pika-sources" \
     --apt-options "--allow-downgrades --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 --option Dpkg::Options::="--force-confdef" " \
     --cache-packages false \
-    --uefi-secure-boot enable \
+    --uefi-secure-boot false \
     --binary-images iso-hybrid \
     --iso-application "$NAME" \
     --iso-volume "$NAME" \
