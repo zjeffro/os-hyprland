@@ -15,4 +15,5 @@ mokutil
 zram-config
 rsync
 distinst
-vanilla-installer
+casper
+calamares-settings-pika
