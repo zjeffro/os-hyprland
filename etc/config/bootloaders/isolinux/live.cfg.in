@@ -1,21 +1,21 @@
 prompt 0
 
 MENU HIDDEN
-MENU AUTOBOOT Booting PikaOS live media in # seconds
+MENU AUTOBOOT Booting Vanilla OS live disk in # seconds
 timeout 50
 
 label live-@FLAVOUR@
-	menu label ^Start PikaOS Live Media
+	menu label ^Try or install Vanilla OS
 	menu default
 	linux /casper/vmlinuz
-	initrd /casper/initrd
+	initrd /casper/initrd.lz
 	append @APPEND_LIVE@
 
 label live-failsafe
-	menu label Start PikaOS Live Media (Safe Graphics)
+	menu label Start Vanilla OS (Safe Graphics)
 	set gfxpayload=keep
 	linux /casper/vmlinuz
-	initrd /casper/initrd
+	initrd /casper/initrd.lz
 	append @APPEND_LIVE@ nomodeset
 
 label hd

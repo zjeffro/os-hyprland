@@ -35,7 +35,7 @@ body:
   - type: dropdown
     id: os-version
     attributes:
-      label: On what version of PikaOS this happens?
+      label: On what version of Vanilla OS this happens?
       description: |
         You can look it up in the Settings app, at the bottom of the About page.
       options:
