@@ -8,10 +8,7 @@ if [ "$IMAGEFORMAT" == "none" ]; then
         touch /var/log/installer/debug
         touch /var/log/syslog
         mkdir -p /home/pikaos/.cache/calamares
-        mkdir -p /home/pikaos/.cache/calamares
         touch /home/pikaos/.cache/calamares/session.log
-        touch /home/pikaos/.cache/calamares/session.log
-        chmod 777 /home/pikaos/.cache/calamares
         chmod 777 /home/pikaos/.cache/calamares
         chown syslog:adm /var/log/syslog
 
