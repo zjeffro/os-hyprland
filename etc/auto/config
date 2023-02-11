@@ -12,8 +12,6 @@ lb config noauto \
     --mode ubuntu \
     --bootloader grub \
     --bootloaders "grub-efi grub-pc" \
-    --chroot-squashfs-compression-type xz \
-    --compression xz \
     --initramfs none \
     --distribution "$BASECODENAME" \
     --parent-distribution "$BASECODENAME" \
