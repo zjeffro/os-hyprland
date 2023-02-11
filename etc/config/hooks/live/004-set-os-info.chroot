@@ -1,5 +1,5 @@
 #!/bin/sh
-# Description: Set Vanilla OS name and info
+# Description: Set PikaOS name and info
 
 # Prepare
 distro_pretty_name="@DISTRO_NAME @VERSION @CHANNEL"
