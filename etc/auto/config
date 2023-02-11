@@ -33,8 +33,6 @@ lb config noauto \
     --apt-options "--allow-downgrades --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 --option Dpkg::Options::="--force-confdef" " \
     --apt-recommends true \
     --cache-packages false \
-    --cache-indices false \
-    --cache-stages false \
     --uefi-secure-boot disable \
     --binary-images iso-hybrid \
     --iso-application "$NAME" \
