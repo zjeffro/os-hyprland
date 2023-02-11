@@ -39,7 +39,7 @@ lb config noauto \
     --iso-volume "$NAME" \
     --firmware-binary false \
     --firmware-chroot false \
-    --zsync true \
+    --zsync false \
     --apt-secure false \
     --security true \
     --updates true \
