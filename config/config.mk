@@ -34,7 +34,6 @@ RM_PKGS=\
 	imagemagick-6.q16 \
 	irqbalance \
 	mozc-utils-gui \
-	pop-installer-session \
 	snapd \
 	ubuntu-session \
 	ubuntu-wallpapers \
