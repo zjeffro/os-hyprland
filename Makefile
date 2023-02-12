@@ -2,6 +2,8 @@
 DISTRO_CODE?=pikaos
 DISTRO_VERSION?=22.10
 DISTRO_DESKTOP?=GNOME
+UBUNTU_CODE?=kinetic
+UBUNTU_MIRROR?=http://archive.ubuntu.com/ubuntu/
 
 DISTRO_EPOCH?=$(shell date +%s)
 DISTRO_DATE?=$(shell date +%Y%m%d)
