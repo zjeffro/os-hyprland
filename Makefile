@@ -8,6 +8,8 @@ UBUNTU_MIRROR?=http://archive.ubuntu.com/ubuntu/
 DISTRO_EPOCH?=$(shell date +%s)
 DISTRO_DATE?=$(shell date +%Y%m%d)
 
+SOURCES_PKG?=https://launchpad.net/~pikaos/+archive/ubuntu/baseos/+files/pika-sources_3.0-99pika18_all.deb
+
 DISTRO_PARAMS?=
 
 ISO_NAME?=$(DISTRO_CODE)_$(DISTRO_VERSION)_$(DISTRO_DESKTOP)
