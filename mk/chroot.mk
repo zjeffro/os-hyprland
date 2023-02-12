@@ -60,8 +60,7 @@ $(BUILD)/chroot: $(BUILD)/debootstrap
 		PURGE=\"$(RM_PKGS)\" \
 		AUTOREMOVE=1 \
 		CLEAN=1 \
-		/iso/chroot.sh \
-		$(DISTRO_REPOS)"
+		/iso/chroot.sh"
  
 	# Rerun chroot script to install POST_DISTRO_PKGS
 	sudo $(CHROOT) "$@.partial" /bin/bash -e -c \
@@ -109,9 +108,6 @@ $(BUILD)/live: $(BUILD)/chroot
 	# Copy GPG public key for APT CDROM
 	gpg --batch --yes --export --armor "$(GPG_NAME)" | sudo tee "$@.partial/iso/apt-cdrom.key"
 
-	# Copy system76-power default modprobe.d configuration
-	sudo cp "data/system76-power.conf" "$@.partial/etc/modprobe.d/system76-power.conf"
-
 	# Copy ubuntu-drivers-common default prime-discrete configuration
 	sudo cp "data/prime-discrete" "$@.partial/etc/prime-discrete"
 
@@ -127,13 +123,6 @@ $(BUILD)/live: $(BUILD)/chroot
 	# Remove undesired casper script
 	if [ -e "$@.partial/usr/share/initramfs-tools/scripts/casper-bottom/01integrity_check" ]; then \
 		sudo rm -f "$@.partial/usr/share/initramfs-tools/scripts/casper-bottom/01integrity_check"; \
-	fi
-
-	# Make casper script for initial setup set the version
-	if [ -n "$(GNOME_INITIAL_SETUP_STAMP)" ]; then \
-		sudo sed -i \
-		's|touch /root/home/$$USERNAME/.config/gnome-initial-setup-done|echo -n "$(GNOME_INITIAL_SETUP_STAMP)" > /root/home/$$USERNAME/.config/gnome-initial-setup-done|' \
-		"$@.partial/usr/share/initramfs-tools/scripts/casper-bottom/52gnome_initial_setup"; \
 	fi
 
 	# Update apt cache
