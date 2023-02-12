@@ -53,7 +53,7 @@ $(BUILD)/chroot: $(BUILD)/debootstrap
 
 	# Run chroot script
 	sudo $(CHROOT) "$@.partial" /bin/bash -e -c \
-		UPDATE=1 \
+		"UPDATE=1 \
 		UPGRADE=1 \
 		INSTALL=\"$(DISTRO_PKGS)\" \
 		LANGUAGES=\"$(LANGUAGES)\" \
