@@ -19,7 +19,7 @@ jobs:
       run: apt update && apt install debootstrap -y
 
     - name: Build ISO
-      run: ./build.sh etc/terraform.conf
+      run: ./build.sh
 
     - uses: actions/upload-artifact@v3
       with:
