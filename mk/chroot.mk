@@ -7,9 +7,9 @@ $(BUILD)/debootstrap:
 	# Install using debootstrap
 	if ! sudo debootstrap \
 		--arch=amd64 \
-		"$(UBUNTU_CODE)" \
+		"kinetic" \
 		"$@.partial" \
-		"$(UBUNTU_MIRROR)"; \
+		"http://archive.ubuntu.com/ubuntu/"; \
 	then \
 		cat "$@.partial/debootstrap/debootstrap.log"; \
 		false; \
