@@ -15,6 +15,6 @@ sudo apt install \
     squashfs-tools \
     xorriso \
     zsync \
-    make-essential
+    build-essential
     
 make
