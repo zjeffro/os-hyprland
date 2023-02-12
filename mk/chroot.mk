@@ -106,7 +106,9 @@ $(BUILD)/live: $(BUILD)/chroot
 	"scripts/mount.sh" "$@.partial"
 
 	# Copy GPG public key for APT CDROM
-	gpg --batch --yes --export --armor "$(GPG_NAME)" | sudo tee "$@.partial/iso/apt-cdrom.key"
+        mkdir -p "$@.partial/iso"
+        touch "$@.partial/iso/apt-cdrom.key"
+	apt-key exportall > "$@.partial/iso/apt-cdrom.key"
 
 	# Copy ubuntu-drivers-common default prime-discrete configuration
 	sudo cp "data/prime-discrete" "$@.partial/etc/prime-discrete"
