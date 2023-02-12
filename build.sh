@@ -2,7 +2,8 @@
 
 gpg --keyserver keyserver.ubuntu.com --recv-keys 204DD8AEC33A7AFF
 
-sudo apt install \
+apt install \
+    sudo
     debootstrap \
     germinate \
     grub-efi-amd64-bin \
