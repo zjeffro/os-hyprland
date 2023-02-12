@@ -2,7 +2,7 @@
 
 gpg --keyserver keyserver.ubuntu.com --recv-keys 204DD8AEC33A7AFF
 
-apt install \
+apt install --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 \
     sudo \
     debootstrap \
     germinate \
