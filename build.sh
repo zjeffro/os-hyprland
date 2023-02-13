@@ -16,6 +16,7 @@ apt install --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=10
     squashfs-tools \
     xorriso \
     zsync \
-    build-essential
+    build-essential \
+    apt-utils
     
 make

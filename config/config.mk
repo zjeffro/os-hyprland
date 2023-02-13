@@ -16,7 +16,8 @@ DISTRO_PKGS=\
 	pika-amdgpu-switcher \
 	pika-gnome-desktop-minimal \
 	dbus-x11 \
-	rsync
+	rsync \
+	apt-utils
 	
 # Packages to install after (to avoid dependency issues)
 POST_DISTRO_PKGS=rsync
