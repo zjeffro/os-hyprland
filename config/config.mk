@@ -17,7 +17,8 @@ DISTRO_PKGS=\
 	pika-gnome-desktop-minimal \
 	dbus-x11 \
 	rsync \
-	apt-utils
+	apt-utils \
+	dosfstools
 	
 # Packages to install after (to avoid dependency issues)
 POST_DISTRO_PKGS=rsync
