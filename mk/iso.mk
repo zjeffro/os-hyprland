@@ -109,7 +109,7 @@ $(BUILD)/grub:
 	mv "$@.partial" "$@"
 
 $(BUILD)/iso_data.tag: $(BUILD)/iso_create.tag $(BUILD)/grub
-	git submodule update --init data/grub-theme
+	git submodule update --init data/grub-theme || echo "Grub theme not found or not not a git repository"
 
 	# Replace disk info
 	rm -rf "$(BUILD)/iso/.disk"
