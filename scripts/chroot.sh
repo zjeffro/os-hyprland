@@ -69,7 +69,7 @@ then
     done
     if [ -n "$pkgs" ]
     then
-        apt-get install -y --no-install-recommends $pkgs
+        apt-get install -y $pkgs
     fi
 fi
 

@@ -18,6 +18,7 @@ apt install --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=10
     zsync \
     build-essential \
     apt-utils \
-    dosfstools
+    dosfstools \
+    git
     
 make

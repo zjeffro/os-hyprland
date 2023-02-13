@@ -18,7 +18,8 @@ DISTRO_PKGS=\
 	dbus-x11 \
 	rsync \
 	apt-utils \
-	dosfstools
+	dosfstools \
+	git
 	
 # Packages to install after (to avoid dependency issues)
 POST_DISTRO_PKGS=rsync
