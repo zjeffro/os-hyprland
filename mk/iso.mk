@@ -102,7 +102,7 @@ $(BUILD)/grub:
 	cp -r "data/efi/shimx64.efi.signed" "$(BUILD)/iso/efi/boot/bootx64.efi"
 	cp -r "data/efi/gcdx64.efi.signed" "$(BUILD)/iso/efi/boot/grubx64.efi"
 
-	mkfs.vfat -C "$@.partial/efi.img" 4096
+	mkfs.fat -C "$@.partial/efi.img" 4096
 	mcopy -s -i "$@.partial/efi.img" "$(BUILD)/iso/efi" ::/
 
 	touch "$@.partial"

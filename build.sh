@@ -17,6 +17,7 @@ apt install --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=10
     xorriso \
     zsync \
     build-essential \
-    apt-utils
+    apt-utils \
+    dosfstools
     
 make
