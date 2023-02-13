@@ -22,3 +22,6 @@ apt install --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=10
     git
     
 make
+
+mkdir -p builds/
+mv build/pikaos/22.10/pikaos_22*.iso builds/
