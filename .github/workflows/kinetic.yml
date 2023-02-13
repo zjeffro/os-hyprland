@@ -10,7 +10,7 @@ jobs:
       image: ubuntu:latest
       volumes:
         - /proc:/proc
-      options: -it
+      options: --privileged -it
 
     steps:
     - uses: actions/checkout@v3
