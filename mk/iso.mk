@@ -35,11 +35,16 @@ $(BUILD)/iso_casper.tag: $(BUILD)/live $(BUILD)/chroot.tag $(BUILD)/live.tag $(B
 	# Update filesystem size
 	sudo du -sx --block-size=1 "$(BUILD)/live" | cut -f1 > "$(BUILD)/iso/$(CASPER_PATH)/filesystem.size"
 
+    	# Generate reproducible file system UUID from DISTRO_EPOCH
+    	fsuuid="$(uuidgen --sha1 --namespace 93a870ff-8565-4cf3-a67b-f47299271a96 --name "$(DISTRO_EPOCH)")"   
+   	sudo mkfs.erofs -U "${fsuuid}" -- "$(BUILD)/iso/$(CASPER_PATH)/filesystem.erofs" "$(BUILD)/live"
+
+
 	# Rebuild filesystem image
-	sudo mksquashfs "$(BUILD)/live" \
-		"$(BUILD)/iso/$(CASPER_PATH)/filesystem.squashfs" \
-		-noappend -fstime "$(DISTRO_EPOCH)" \
-		-not-reproducible
+	#sudo mksquashfs "$(BUILD)/live" \
+	#	"$(BUILD)/iso/$(CASPER_PATH)/filesystem.squashfs" \
+	#	-noappend -fstime "$(DISTRO_EPOCH)" \
+	#	-not-reproducible
 
 	sudo chown -R "$(USER):$(USER)" "$(BUILD)/iso/$(CASPER_PATH)"
 
