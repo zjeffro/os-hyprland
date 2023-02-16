@@ -1,4 +1,4 @@
-name: PikaOS kinetic
+name: PikaOS kinetic On non self-hosted
 
 on:
   workflow_dispatch
