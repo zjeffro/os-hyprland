@@ -43,7 +43,7 @@ $(BUILD)/chroot: $(BUILD)/debootstrap
 	sudo $(CHROOT) "$@.partial" /bin/bash -e -c \
 		"UPDATE=1 \
 		UPGRADE=1 \
-		INSTALL=\"--no-install-recommends gnupg software-properties-common\" \
+		INSTALL=\"--no-install-recommends gnupg software-properties-commonb adwaita-icon-theme humanity-icon-theme \" \
 		AUTOREMOVE=1 \
 		CLEAN=1 \
 		/iso/chroot.sh"
