@@ -4,6 +4,8 @@ DISTRO_VOLUME_LABEL=$(DISTRO_NAME) $(DISTRO_VERSION) amd64 Intel
 
 # Packages to install
 DISTRO_PKGS=\
+	ubuntu-minimal \
+	ubuntu-standard \
 	ubuntu-keyring \
 	pika-sources \
 	update-systemd-boot \
