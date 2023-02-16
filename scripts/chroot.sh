@@ -39,6 +39,9 @@ sudo apt install ./pika-sources_3.0-99pika18_all.deb --yes --option Acquire::Ret
 rm -rf ./pika-sources.deb
 apt-get update -y
 
+# Actions to do before DISTRO_PKGS
+sudo apt install adwaita-icon-theme humanity-icon-theme amdgpu-drm --yes --option Acquire::Retries=5
+sudo mkdir -p /usr/lib/firmware/
 
 # Update package definitions
 if [ -n "${UPDATE}" ]
