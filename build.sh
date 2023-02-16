@@ -14,6 +14,7 @@ apt install --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=10
     qemu-efi \
     qemu-kvm \
     squashfs-tools \
+    erofs-utils \
     xorriso \
     zsync \
     build-essential \
