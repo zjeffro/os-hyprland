@@ -19,7 +19,12 @@ DISTRO_PKGS=\
 	rsync \
 	apt-utils \
 	dosfstools \
-	git
+	intel-microcode \
+	amd64-microcode \
+	iucode-tool \
+	setserial \
+	git \
+	kernel-pika 
 	
 # Packages to install after (to avoid dependency issues)
 POST_DISTRO_PKGS=rsync
