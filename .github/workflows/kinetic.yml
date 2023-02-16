@@ -1,3 +1,5 @@
+
+
 name: PikaOS kinetic
 
 on:
@@ -20,8 +22,20 @@ jobs:
 
     - name: Build ISO
       run: ./build.sh
+      
+        # http://man7.org/linux/man-pages/man1/date.1.html
+    - name: Get Date
+      id: get-date
+      run: |
+        echo "::set-output name=date::$(/bin/date -u "+%Y%m%d%H%M")"
+      shell: bash
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/cache@v3
       with:
-        name: PikaOS 22.10
         path: builds/
+        key: ${{ runner.os }}-${{ steps.get-date.outputs.date }}
+
+#     - uses: actions/upload-artifact@v3
+#       with:
+#         name: PikaOS 22.10
+#         path: builds/
