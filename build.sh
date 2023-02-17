@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ISO_IMAGE=PikaOS-GNOME-$(date '+%Y-%m-%d').iso
+ISO_IMAGE=PikaOS-KDE-$(date '+%Y-%m-%d').iso
 
 gpg --keyserver keyserver.ubuntu.com --recv-keys 204DD8AEC33A7AFF
 

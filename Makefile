@@ -1,7 +1,7 @@
 # Configuration settings
 DISTRO_CODE?=pikaos
 DISTRO_VERSION?=22.10
-DISTRO_DESKTOP?=GNOME
+DISTRO_DESKTOP?=KDE
 UBUNTU_CODE?=kinetic
 UBUNTU_MIRROR?=http://archive.ubuntu.com/ubuntu/
 

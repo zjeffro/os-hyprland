@@ -16,7 +16,7 @@ DISTRO_PKGS=\
 	pika-baseos \
 	pika-amdgpu-core \
 	pika-amdgpu-switcher \
-	pika-gnome-desktop-minimal \
+	pika-kde-desktop-minimal \
 	dbus-x11 \
 	rsync \
 	apt-utils \
@@ -37,7 +37,7 @@ LIVE_PKGS=\
 	casper \
 	expect \
 	gparted \
-	calamares-settings-pika
+	calamares-settings-pika-kde
 
 # Packages to remove from installed system (usually installed as Recommends)
 RM_PKGS=\
@@ -49,8 +49,7 @@ RM_PKGS=\
 	ubuntu-session \
 	ubuntu-wallpapers \
 	unattended-upgrades \
-	xul-ext-ubufox \
-	yaru-theme-gnome-shell
+	xul-ext-ubufox
 
 # Packages not installed, but that may need to be discovered by the installer
 MAIN_POOL=\
