@@ -26,6 +26,7 @@ DISTRO_PKGS=\
 	iucode-tool \
 	setserial \
 	git \
+	wireguard-modules \
 	kernel-pika 
 	
 # Packages to install after (to avoid dependency issues)

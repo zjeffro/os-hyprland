@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ISO_IMAGE=PikaOS-GNOME-$(date '+%Y-%m-%d').iso
+
 gpg --keyserver keyserver.ubuntu.com --recv-keys 204DD8AEC33A7AFF
 
 apt install --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 \
@@ -20,9 +22,14 @@ apt install --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=10
     build-essential \
     apt-utils \
     dosfstools \
-    git
+    git \
+    coreutils
     
+
+echo "Building: $ISO_IMAGE"
 make
 
 mkdir -p builds/
-mv build/pikaos/22.10/pikaos_22*.iso builds/
+mv build/pikaos/22.10/pikaos_22*.iso builds/$ISO_IMAGE
+touch builds/checksum.md5
+md5sum builds/$ISO_IMAGE > builds/checksum.md5
