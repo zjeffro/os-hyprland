@@ -35,7 +35,7 @@ $(BUILD)/iso_casper.tag: $(BUILD)/live $(BUILD)/chroot.tag $(BUILD)/live.tag $(B
 	# Update filesystem size
 	sudo du -sx --block-size=1 "$(BUILD)/live" | cut -f1 > "$(BUILD)/iso/$(CASPER_PATH)/filesystem.size"
 
-	sudo mkfs.erofs -zlzma,9 "$(BUILD)/iso/$(CASPER_PATH)/filesystem.erofs" "$(BUILD)/live"
+	sudo mkfs.erofs -zlz4hc,12 "$(BUILD)/iso/$(CASPER_PATH)/filesystem.erofs" "$(BUILD)/live"
 
 	# Rebuild filesystem image
 	# sudo mksquashfs "$(BUILD)/live" \
