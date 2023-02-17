@@ -23,7 +23,7 @@ jobs:
     - name: Build ISO
       run: ./build.sh
 
-    - uses: filosganga/upload-tartifact@7f320c4284bb1a63685f5b5a748c20ec6d07fb98
+    - uses: actions/upload-artifact@v3
       with:
         name: PikaOS 22.10
         path: builds/
