@@ -39,7 +39,8 @@ $(BUILD)/iso_casper.tag: $(BUILD)/live $(BUILD)/chroot.tag $(BUILD)/live.tag $(B
 	sudo mksquashfs "$(BUILD)/live" \
 		"$(BUILD)/iso/$(CASPER_PATH)/filesystem.squashfs" \
 		-noappend -fstime "$(DISTRO_EPOCH)" \
-		-comp zstd -b 1M -Xcompression-level 22
+		-comp zstd -b 1M -Xcompression-level 22 \
+		-not-reproducible -always-use-fragments
 
 	sudo chown -R "$(USER):$(USER)" "$(BUILD)/iso/$(CASPER_PATH)"
 
