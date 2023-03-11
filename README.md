@@ -1,6 +1,6 @@
 # PikaOS ISO production
 
-This repository contains the tools necessary for building PikaOS ISOs.
+This repository contains the tools necessary for building PikaOS KDE ISOs.
 
 ## Building
 
