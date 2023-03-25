@@ -12,7 +12,6 @@ DISTRO_PKGS=\
 	systemd-boot \
 	systemd \
 	zram-config \
-	plymouth-theme-spinner \
 	plymouth-theme-pika-text \
 	pika-baseos \
 	pika-amdgpu-core \
@@ -71,6 +70,9 @@ MAIN_POOL=\
 	libfl2 \
 	libx86-1 \
 	lm-sensors \
+	plymouth-theme-spinner \
+	plymouth \
+	plymouth-label \
 	pm-utils \
 	postfix \
 	powermgmt-base \
