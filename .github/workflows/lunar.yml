@@ -1,6 +1,6 @@
 
 
-name: PikaOS KDE kinetic
+name: PikaOS KDE lunar
 
 on:
   workflow_dispatch
