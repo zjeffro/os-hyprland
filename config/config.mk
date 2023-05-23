@@ -8,8 +8,6 @@ DISTRO_PKGS=\
 	ubuntu-standard \
 	ubuntu-keyring \
 	pika-sources \
-	update-systemd-boot \
-	systemd-boot \
 	systemd \
 	zram-config \
 	fonts-ubuntu \
