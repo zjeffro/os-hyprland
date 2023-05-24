@@ -86,4 +86,5 @@ MAIN_POOL=\
 	vbetool \
 	xbacklight \
 	refind \
-	mokutil
+	mokutil \
+	pika-refind-theme
