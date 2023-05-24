@@ -1,6 +1,6 @@
 
 
-name: PikaOS KDE lunar ISO
+name: PikaOS KDE 23.04 lunar ISO
 
 on:
   workflow_dispatch
@@ -25,5 +25,5 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        name: PikaOS 22.10
+        name: PikaOS KDE 23.04 lunar ISO
         path: builds/
