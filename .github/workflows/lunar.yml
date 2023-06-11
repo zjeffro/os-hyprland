@@ -1,6 +1,6 @@
 
 
-name: PikaOS KDE 23.04 lunar ISO
+name: PikaOS Hyprland 23.04 lunar ISO
 
 on:
   workflow_dispatch
