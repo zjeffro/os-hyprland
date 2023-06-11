@@ -16,6 +16,7 @@ DISTRO_PKGS=\
 	pika-baseos \
 	pika-amdgpu-core \
 	pika-amdgpu-switcher \
+	pika-session-hyprland \
 	pika-hyprland-desktop-minimal \
 	dbus-x11 \
 	rsync \
@@ -54,6 +55,7 @@ RM_PKGS=\
 	snapd \
 	unattended-upgrades \
 	xul-ext-ubufox \
+	ubuntu-session \
 	tilix \
 	ibus 
 
