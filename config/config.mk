@@ -52,8 +52,6 @@ RM_PKGS=\
 	irqbalance \
 	mozc-utils-gui \
 	snapd \
-	ubuntu-session \
-	ubuntu-wallpapers \
 	unattended-upgrades \
 	xul-ext-ubufox \
 	tilix \
