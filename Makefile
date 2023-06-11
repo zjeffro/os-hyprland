@@ -1,7 +1,7 @@
 # Configuration settings
 DISTRO_CODE?=pikaos
 DISTRO_VERSION?=23.04
-DISTRO_DESKTOP?=KDE
+DISTRO_DESKTOP?=Hyprland
 UBUNTU_CODE?=lunar
 UBUNTU_MIRROR?=http://archive.ubuntu.com/ubuntu/
 
