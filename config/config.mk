@@ -56,8 +56,10 @@ RM_PKGS=\
 	unattended-upgrades \
 	xul-ext-ubufox \
 	ubuntu-session \
+	ubuntu-wallpapers \
 	tilix \
-	ibus 
+	ibus \
+	gnome-shell
 
 # Packages not installed, but that may need to be discovered by the installer
 MAIN_POOL=\
