@@ -2,7 +2,7 @@
 
 ARCH=amd64
 RELEASE=2304
-DESKTOP=KDE
+DESKTOP=Hyprland
 ISO_IMAGE=PikaOS-$DESKTOP-$RELEASE-$ARCH-$(date '+%y.%m.%d')
 
 gpg --keyserver keyserver.ubuntu.com --recv-keys 204DD8AEC33A7AFF
