@@ -16,7 +16,7 @@ DISTRO_PKGS=\
 	pika-baseos \
 	pika-amdgpu-core \
 	pika-amdgpu-switcher \
-	pika-session-hyprland \
+	pika-hyprland-session \
 	pika-hyprland-desktop-minimal \
 	dbus-x11 \
 	rsync \
