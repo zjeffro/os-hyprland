@@ -3,7 +3,7 @@ DISTRO_CODE?=pikaos
 DISTRO_VERSION?=23.04
 DISTRO_DESKTOP?=Hyprland
 UBUNTU_CODE?=lunar
-UBUNTU_MIRROR?=http://archive.ubuntu.com/ubuntu/
+UBUNTU_MIRROR?=http://mirror.netcologne.de/ubuntu/
 
 DISTRO_EPOCH?=$(shell date +%s)
 DISTRO_DATE?=$(shell date +%Y%m%d)
