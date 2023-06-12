@@ -41,7 +41,7 @@ germinate: $(SEEDS)/distro $(SEEDS)/live $(SEEDS)/pool $(SEEDS)/STRUCTURE
 	germinate \
 	    -S seeds \
 	    -s ubuntu.$(UBUNTU_CODE) \
-	    -m http://archive.ubuntu.com/ubuntu \
+	    -m http://mirror.netcologne.de/ubuntu/ \
 	    -d $(UBUNTU_CODE),$(UBUNTU_CODE)-updates \
 	    -a amd64 \
 	    -c main,restricted,universe,multiverse \
