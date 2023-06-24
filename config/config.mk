@@ -16,9 +16,12 @@ DISTRO_PKGS=\
 	pika-baseos \
 	pika-amdgpu-core \
 	pika-amdgpu-switcher \
+        greetd \
+        tuigreet\
 	pika-hyprland-session \
 	pika-hyprland-desktop-minimal \
 	dbus-x11 \
+        pika-hyprland-settings \
 	rsync \
 	apt-utils \
 	dosfstools \
