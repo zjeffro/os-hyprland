@@ -113,11 +113,6 @@ then
     popd
 fi
 
-#Set up autologin
-sed -e 's #[initial_session] [initial_session] g' -i /etc/greetd/config.toml
-sed -e 's\#user = "pikaos"\user = "pikaos"\g' -i /etc/greetd/config.toml
-sed -e 's\#command = "Hyprland"\command = "Hyprland"\g' -i /etc/greetd/config.toml
-
 # Remove apt files
 if [ -n "${CLEAN}" ]
 then
