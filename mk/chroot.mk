@@ -194,9 +194,9 @@ $(BUILD)/pool: $(BUILD)/chroot
 		/iso/chroot.sh"
 
 	#Set up autologin
-	sudo $(CHROOT) "$@.partial" /bin/bash -e -c sed -e 's #[initial_session] [initial_session] g' -i /etc/greetd/config.toml
-	sudo $(CHROOT) "$@.partial" /bin/bash -e -c sed -e 's\#user = "pikaos"\user = "pikaos"\g' -i /etc/greetd/config.toml
-	sudo $(CHROOT) "$@.partial" /bin/bash -e -c sed -e 's\#command = "Hyprland"\command = "Hyprland"\g' -i /etc/greetd/config.toml
+	sudo $(CHROOT) "$@.partial" /bin/bash -e -c "sed -e 's #[initial_session] [initial_session] g' -i /etc/greetd/config.toml"
+	sudo $(CHROOT) "$@.partial" /bin/bash -e -c "sed -e 's*#user = \"pikaos\"*user = \"pikaos\"*g' -i /etc/greetd/config.toml"
+	sudo $(CHROOT) "$@.partial" /bin/bash -e -c "sed -e 's*#command = \"Hyprland\"*command = \"Hyprland\"*g' -i /etc/greetd/config.toml"
 
 	# Unmount chroot
 	"scripts/unmount.sh" "$@.partial"
