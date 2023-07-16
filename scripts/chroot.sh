@@ -46,6 +46,19 @@ sudo apt install update-notifier --yes --option Acquire::Retries=5
 sudo apt install update-manager --yes --option Acquire::Retries=5
 sudo apt install ubuntu-release-upgrader-gtk --yes --option Acquire::Retries=5
 sudo mkdir -p /usr/lib/firmware/
+if echo "${INSTALL}" | grep nvidia-driver
+then
+    sudo apt install  nvidia-kernel-common-535  --yes --option Acquire::Retries=5
+    sudo apt install  kernel-pika  --yes --option Acquire::Retries=5
+    ls /usr/src
+    ls /boot
+    sudo apt install  nvidia-dkms-535  --yes --option Acquire::Retries=5 || ln -sf /boot/config-6.4.0-pikaos /boot/config-6.3.8-arch1-1 && \
+        ln -sf /boot/initrd.img-6.4.0-pikaos /boot/initrd.img-6.3.8-arch1-1 && \
+        ln -sf /usr/src/linux-headers-6.4.0-pikaos /usr/src/linux-headers-6.3.8-arch1-1 && \
+        ln -sf /boot/System.map-6.4.0-pikaos /boot/System.map-6.3.8-arch1-1 && \
+        ln -sf /boot/vmlinuz-6.4.0-pikaos /boot/vmlinuz-6.3.8-arch1-1 && \
+        sudo dpkg --configure nvidia-dkms-535 && sudo apt-get install -yf
+fi
 
 # Update package definitions
 if [ -n "${UPDATE}" ]

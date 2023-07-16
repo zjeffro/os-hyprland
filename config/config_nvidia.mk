@@ -1,6 +1,6 @@
 DISTRO_NAME=PikaOS
 
-DISTRO_VOLUME_LABEL=$(DISTRO_NAME) $(DISTRO_VERSION) amd64 Intel
+DISTRO_VOLUME_LABEL=$(DISTRO_NAME) $(DISTRO_VERSION) amd64 Nvidia
 
 # Packages to install
 DISTRO_PKGS=\
@@ -38,12 +38,15 @@ DISTRO_PKGS=\
 	open-vm-tools-desktop \
 	f2fs-tools \
 	xfsprogs \
-    refind
-	
+    refind \
+	nvidia-driver-535
+
 # Packages to install after (to avoid dependency issues)
 POST_DISTRO_PKGS=rsync
 
 DISTRO_PARAMS+=amd_pstate=active
+DISTRO_PARAMS+=modules_load=nvidia
+DISTRO_PARAMS+=nvidia-drm.modeset=1
 
 # Packages to have in live instance
 LIVE_PKGS=\
