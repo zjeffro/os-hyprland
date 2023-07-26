@@ -38,6 +38,7 @@ DISTRO_PKGS=\
 	open-vm-tools-desktop \
 	f2fs-tools \
 	xfsprogs \
+        pika-hyprland-autologin \
     refind
 	
 # Packages to install after (to avoid dependency issues)
