@@ -39,6 +39,7 @@ DISTRO_PKGS=\
 	f2fs-tools \
 	xfsprogs \
     refind \
+        pika-hyprland-autologin \
 	nvidia-driver-535
 
 # Packages to install after (to avoid dependency issues)
