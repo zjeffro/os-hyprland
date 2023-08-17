@@ -53,10 +53,10 @@ then
     ls /usr/src
     ls /boot
     sudo apt install  nvidia-dkms-535  --yes --option Acquire::Retries=5 || ln -sf /boot/config-6.4.6-pikaos /boot/config-6.3.8-arch1-1 && \
-        ln -sf /boot/initrd.img-6.4.6-pikaos /boot/initrd.img-6.3.8-arch1-1 && \
-        ln -sf /usr/src/linux-headers-6.4.6-pikaos /usr/src/linux-headers-6.3.8-arch1-1 && \
-        ln -sf /boot/System.map-6.4.6-pikaos /boot/System.map-6.3.8-arch1-1 && \
-        ln -sf /boot/vmlinuz-6.4.6-pikaos /boot/vmlinuz-6.3.8-arch1-1 && \
+        ln -sf /boot/initrd.img-6.4.9-pikaos /boot/initrd.img-6.3.8-arch1-1 && \
+        ln -sf /usr/src/linux-headers-6.4.9-pikaos /usr/src/linux-headers-6.3.8-arch1-1 && \
+        ln -sf /boot/System.map-6.4.9-pikaos /boot/System.map-6.3.8-arch1-1 && \
+        ln -sf /boot/vmlinuz-6.4.9-pikaos /boot/vmlinuz-6.3.8-arch1-1 && \
         sudo dpkg --configure nvidia-dkms-535 && sudo apt-get install -yf
 fi
 
