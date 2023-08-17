@@ -37,7 +37,6 @@ apt install wget -y
 wget https://ppa.pika-os.com/dists/lunar/pika-sources.deb
 sudo apt install ./pika-sources.deb --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 --option Dpkg::Options::="--force-confnew"
 rm -rf ./pika-sources.deb
-sed -i 's/archive.ubuntu.com/mirror.netcologne.de/g' /etc/apt/sources.list.d/system.sources
 apt-get update -y
 
 # Actions to do before DISTRO_PKGS
