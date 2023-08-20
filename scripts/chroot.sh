@@ -51,12 +51,12 @@ then
     sudo apt install  kernel-pika  --yes --option Acquire::Retries=5
     ls /usr/src
     ls /boot
-    sudo apt install  nvidia-dkms-535  --yes --option Acquire::Retries=5
-    ln -sfv /boot/config-6.4.9-pikaos /boot/config-6.4.7-arch1-1
-    ln -sfv /boot/initrd.img-6.4.9-pikaos /boot/initrd.img-6.4.7-arch1-1
-    ln -sfv /usr/src/linux-headers-6.4.9-pikaos /usr/src/linux-headers-6.4.7-arch1-1
-    ln -sfv /boot/System.map-6.4.9-pikaos /boot/System.map-6.4.7-arch1-1
-    ln -sfv /boot/vmlinuz-6.4.9-pikaos /boot/vmlinuz-6.4.7-arch1-1
+    sudo apt install  nvidia-dkms-535  --yes --option Acquire::Retries=5 || echo "Workaround: Link chroot kernel to host kernel..."
+    ln -sfv /boot/config-6.4.9-pikaos /boot/config-$(uname -r)
+    ln -sfv /boot/initrd.img-6.4.9-pikaos /boot/initrd.img-$(uname -r)
+    ln -sfv /usr/src/linux-headers-6.4.9-pikaos /usr/src/linux-headers-$(uname -r)
+    ln -sfv /boot/System.map-6.4.9-pikaos /boot/System.map-$(uname -r)
+    ln -sfv /boot/vmlinuz-6.4.9-pikaos /boot/vmlinuz-$(uname -r)
     sudo dpkg --configure nvidia-dkms-535 && sudo apt-get install -yf
 fi
 
